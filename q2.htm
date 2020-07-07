@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
-  <link href="instructions.css" rel="stylesheet" type="text/css">
-  <title>WebTech Exam - Q2</title>
-</head>
-<body>
-  <h1>Gordon Hayward</h1>
-  <div id="question-body">
-    <p id="instruction">Please create <strong>one</strong> function to do the following: (a) when user clicks on first
-      picture, h1 must be
-      changed to "Gordon Hayward is Serious", the second picture must disappear; (b) when user clicks on the second
-      picture,
-      h1 must be changed to "Gordon Hayward is Smiling", the first picture must disappear; (c) when user <strong>double-clicks</strong>
-      on h1, h1 must be changed to "Let's Go, Celtics!", both pictures must re-appear.
-    <div class="question-second">
-      <img alt="Gordon Hayward 1" height="200" src="images/gordonhayward1.png"/>
-      <img alt="Gordon Hayward 2" height="200" src="images/gordonhayward2.png"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <link href="instructions.css" rel="stylesheet" type="text/css" />
+    <title>WebTech Exam - Q2</title>
+  </head>
+  <body>
+    <h1>Gordon Hayward</h1>
+    <div id="question-body">
+      <p id="instruction">
+        Please create <strong>one</strong> function to do the following: (a)
+        when user clicks on first picture, h1 must be changed to "Gordon Hayward
+        is Serious", the second picture must disappear; (b) when user clicks on
+        the second picture, h1 must be changed to "Gordon Hayward is Smiling",
+        the first picture must disappear; (c) when user
+        <strong>double-clicks</strong> on h1, h1 must be changed to "Let's Go,
+        Celtics!", both pictures must re-appear.
+      </p>
+
+      <div class="question-second">
+        <img
+          id="img1"
+          alt="Gordon Hayward 1"
+          height="200"
+          src="images/gordonhayward1.png"
+        />
+        <img
+          id="img2"
+          alt="Gordon Hayward 2"
+          height="200"
+          src="images/gordonhayward2.png"
+        />
+      </div>
     </div>
-  </div>
-</body>
+    <script>
+      let image1 = document.getElementById("img1")
+      let image2 = document.getElementById("img2")
+      let heading = document.querySelector("h1")
+      function change1(){
+        heading.innerText="Gordon Hayward is serious"
+        image2.style.display="none"
+      }
+      image1.onclick=change1
+
+      function change2(){
+        heading.innerText="Gordon Hayward is smiling"
+        image1.style.display="none"
+      }
+      image2.onclick=change2
+      function change3(){
+        heading.innerText="Let's go Celtics"
+        image1.style.display="inline"
+        image2.style.display="inline"
+        
+      }
+      heading.ondblclick=change3
+    </script>
+  </body>
 </html>

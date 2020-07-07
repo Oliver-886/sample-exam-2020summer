@@ -1,2 +1,58 @@
 body {
+    margin: 0;
+}
+#celtics{
+    position: absolute;
+    margin-left: 200px;
+    padding-top: 10px;
+
+}
+#header{
+    width:100%;height: 90px; background-color:#008348; margin-top: 0;
+    margin-right: 200px;
+}
+li{
+    display: inline-block;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    font-size: 18pt;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    margin-top:15px;
+
+  
+}
+#nav{
+    margin-left: 500px;
+    margin-top: 0;
+    display: inline;
+}
+table {
+  border:solid black;
+  margin-left: auto;margin-right: auto;
+  margin-top: 100px;
+  border-collapse: collapse;
+  font-size: 10pt;
+}
+td{
+  border: solid #ececec;
+}
+
+.first{
+  width: 150px;
+  height: 160px;
+  background-color:#e1ece4 ;
+  
+}
+li:hover{
+  color: #008348;
+}
+.second{
+width: 250px;
+}
+.bold{
+  font-size: 22pt;
 }
