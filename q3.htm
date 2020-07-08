@@ -30,24 +30,21 @@
      let number = document.getElementById("number")
      function countDown(){
        
-       
-       counter = counter - 1;
-       
-       console.log(counter)
-       number.innerText= counter
-
-       if(counter===0){
+       counter= counter-1 
+       number.innerText=counter
+       setTimeout(countDown,1000)
+       if(counter === 0){
          number.style.color="red"
-         counter = 11
+         counter = 10
        }
-       else{number.style="black"}
-
-       setTimeout(countDown,1000);
+       else{number.style.color="black"}
 
      }
+
      document.getElementById("click").onclick=countDown
 
 
     </script>
   </body>
 </html>
+
